@@ -1,0 +1,406 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 1vw;
+    overflow: hidden;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    /* background-image: url("https://images.unsplash.com/photo-1642437386648-2521ba6f908b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1145&q=80"); */
+    background-image: -moz-linear-gradient( 90deg, rgb(205, 199, 255), rgb(184, 234, 255) );
+    background-image: -webkit-linear-gradient( 90deg, rgb(205, 199, 255), rgb(184, 234, 255) );
+    background-image: linear-gradient( 90deg, rgb(205, 199, 255), rgb(184, 234, 255) );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    /* padding: 8px; */
+}
+
+.container__half {
+    flex: 1;
+    display: flex;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+/* card */
+.card_review {
+    border-radius: 2rem;
+    padding: 2rem;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .card_review img {
+        width: 40rem;
+        height: 20rem;
+        background-image: url("https://media.istockphoto.com/photos/sympathy-card-with-calla-lily-flowers-picture-id1303050518?b=1&k=20&m=1303050518&s=170667a&w=0&h=w-9N1C7zX6WCAEPEZkCh2MkmmAjDh8-dam3iDZ_UMBo=");
+        border-radius: 0.5em;
+    }
+/* ----------------- */
+/* form */
+.payment_form {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.25rem;
+    overflow: auto;
+}
+
+.form_header,
+.form_footer {
+    height: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+.form_container {
+    flex-grow: 1;
+    margin: 0 3rem 0 3rem;
+}
+
+.form_header > div {
+    height: 95%;
+    background: rgb(46, 46, 82);
+    width: 90%;
+    border-radius: 0.25rem;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.form__item--single {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form__item--group {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.item--group {
+    display: flex;
+    flex-direction: row;
+}
+
+    .item--group .item:not(:last-child) {
+        margin-right: 0.25em;
+    }
+
+.form__item--group .item {
+    position: relative;
+}
+
+    .form__item--group .item span {
+        position: absolute;
+        right: 0;
+    }
+/*form__item--group*/
+
+/*form__item--single*/
+.form__item--single > label {
+    font-size: 1.5rem;
+    font-weight: 630;
+}
+
+.item > input[type="text"],
+expdate {
+    border: 0;
+    height: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 0.25em;
+}
+
+.form__item--groub .item input[type="text"] {
+    border: 0;
+    height: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 0.25em;
+}
+
+/* stepper */
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+.stepperButton {
+    display: flex;
+    /* width of stepper here */
+    width: 7rem;
+    height: 2rem;
+    position: relative;
+}
+
+.stepper__button--p,
+.stepper__button--m {
+    width: 40%;
+    font-size: 1vw;
+}
+
+#creditNumber,
+#amount,
+#address,
+#cvv,
+#expMonth,
+#expYear,
+#phone,
+select {
+    font-size: 1vw;
+}
+
+.stepperButton button {
+    padding: 0.5em;
+}
+
+.stepper__input {
+    display: flex;
+    width: 100%;
+}
+
+input#amount {
+    text-align: center;
+    padding: 3px 8px;
+    width: 100%;
+    display: flex;
+}
+
+.stepperButton * {
+    border: 0px;
+}
+
+.stepperButton {
+    border: 1px solid;
+}
+/* _____________ */
+/* payment__panel */
+.form__item--group > * label {
+    color: rgb(131, 131, 131);
+    font-weight: 670;
+    font-size: 0.75rem;
+    padding: 0.25rem;
+}
+
+.credit__accept {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.accept__item {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+    .accept__item svg {
+        width: 1.5rem;
+        filter: grayscale(100%);
+    }
+/* _____________ */
+/* expdate */
+expdate {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1px 2px;
+}
+
+    expdate select {
+        flex-grow: 1;
+        font-size: 1rem;
+        text-align: center;
+        border: 0;
+        width: 1.5rem;
+    }
+/* _____________ */
+/* card credit */
+.card--mini {
+    margin: 8px 11px;
+    height: 30px;
+    filter: grayscale(100%);
+}
+
+.accept {
+    filter: grayscale(0%) !important;
+}
+/* ______ */
+/* error */
+
+.item > span {
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+    .item > span > i {
+        top: calc(50% + 0.25rem);
+        right: calc(100% + 0.25em);
+    }
+
+.error {
+    color: #e84118;
+    position: absolute;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 6px solid;
+    border-color: #dbdcef;
+    border-right-color: #ffa147;
+    animation: spinner-d3wgkg 1s infinite linear;
+}
+/* animation */
+@keyframes spinner-d3wgkg {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.shake-horizontal {
+    -webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+    animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2022-3-6 23:34:14
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation shake-horizontal
+ * ----------------------------------------
+ */
+@-webkit-keyframes shake-horizontal {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    10%, 30%, 50%, 70% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+
+    20%, 40%, 60% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+
+    80% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+    }
+
+    90% {
+        -webkit-transform: translateX(-8px);
+        transform: translateX(-8px);
+    }
+}
+
+@keyframes shake-horizontal {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    10%, 30%, 50%, 70% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+
+    20%, 40%, 60% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+
+    80% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+    }
+
+    90% {
+        -webkit-transform: translateX(-8px);
+        transform: translateX(-8px);
+    }
+}
+
+/* ___________ */
+
+/* ___________ */
+/* Button */
+/* CSS */
+.button-39 {
+    background-color: #192a56;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    text-decoration: none #d1d5db solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+    .button-39:hover {
+        background-color: #2f3640;
+    }
+
+    .button-39:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+    }
+
+    .button-39:focus-visible {
+        box-shadow: none;
+    }
+/* ___________ */
